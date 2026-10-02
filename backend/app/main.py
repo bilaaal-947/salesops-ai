@@ -11,6 +11,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
+from app.api.analytics import router as analytics_router
 
 from app.config import settings
 from app.database.session import get_db
@@ -20,6 +21,8 @@ app = FastAPI(
     description="Autonomous AI Sales Operations Agent",
     version="0.1.0",
 )
+
+app.include_router(analytics_router, prefix="/api", tags=["analytics"])
 
 app.add_middleware(
     CORSMiddleware,
