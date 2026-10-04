@@ -38,6 +38,7 @@ class Settings(BaseSettings):
     # LLM
     openai_api_key: str = ""
     anthropic_api_key: str = ""
+    gemini_api_key: str = ""
     llm_provider: str = "openai"
     llm_model_fast: str = ""
     llm_model_reasoning: str = ""
