@@ -32,6 +32,8 @@ class Settings(BaseSettings):
     supabase_url: str = ""
     supabase_anon_key: str = ""
     supabase_jwt_secret: str = ""
+    supabase_jwks_url: str = ""
+    supabase_publishable_key: str = ""
 
     # LLM
     openai_api_key: str = ""
